@@ -1,0 +1,114 @@
+Here's a basic Software Requirements Specification (SRS) document tailored to the UI design of the Location Tracker app based on your initial Flutter code. This document covers the purpose, scope, functional requirements, and user interface requirements.
+
+---
+
+ Software Requirements Specification (SRS) for Location Tracker App
+
+ 1. Introduction
+
+ 1.1 Purpose
+This SRS document specifies the requirements for the Location Tracker app, focusing on creating a user interface to display attendance, current locations, and route details of individual members. The primary goal is to build a UI that helps users view member attendance and track individual routes in a non-functional prototype.
+
+ 1.2 Scope
+The Location Tracker app is a simple, non-interactive application designed for location tracking and route visualization. It allows users to view member attendance, current location, and travel history. This app will display basic details, including location points on a map, timelines, and a date filter for easy tracking of past travels.
+
+ 1.3 Definitions, Acronyms, and Abbreviations
+- UI: User Interface
+- SRS: Software Requirements Specification
+- Member An individual whose attendance and travel information are displayed in the app
+
+ 1.4 Overview
+This document provides an overview of the functional and non-functional requirements, system features, and basic UI design specifications for the Location Tracker app.
+
+ 2. Overall Description
+
+ 2.1 Product Perspective
+This app is a standalone application developed in Flutter. It provides a simple user interface with three main screens:
+1. Attendance Screen
+2. Location Detail Screen
+3. Route Detail Screen
+
+ 2.2 Product Functions
+The Location Tracker app performs the following functions:
+1. Displays a list of members on the Attendance Screen.
+2. Allows users to view an individual member's current location and travel route.
+3. Shows a detailed view of routes traveled between locations, including total distance, duration, and stops.
+
+ 2.3 User Classes and Characteristics
+The primary users of this app include:
+- Supervisors/Managers**: To view the attendance and travel history of members.
+- Employees/Team Members**: For personal reference of their travel routes and attendance records.
+
+ 2.4 Operating Environment
+- Platform: Android and iOS
+- Technology: Flutter framework for cross-platform compatibility
+
+ 2.5 Constraints
+- The app is a non-functional prototype, so no backend or real data is integrated.
+- Google Maps API or equivalent integration is not implemented in this version.
+
+ 3. Functional Requirements
+
+ 3.1 Attendance Screen
+1. Description**: Displays a list of members with attendance details.
+2. Functional Requirements**:
+   - The screen should display a list of members.
+   - Each list item should include the member’s name and two icons:
+     - **Location Icon**: Displays current location on the map.
+     - **Route Icon**: Displays route details of the selected member.
+
+ 3.2 Location Detail Screen
+1. Description**: Shows the selected member’s current location on a map and a timeline of visited locations.
+2. Functional Requirements**:
+   - Display the current location of the member on a map.
+   - Show a timeline view of visited locations for the current day.
+   - Provide a date filter to view travel history for past dates.
+   - Allow users to pull up the timeline to see the full list of visited locations.
+
+ 3.3 Route Detail Screen
+1. Description**: Shows the detailed route between two visited locations.
+2. Functional Requirements**:
+   - Display route details including:
+     - Start Location
+     - Stop Location
+     - Total Distance (in kilometers)
+     - Total Duration (in hours and minutes)
+   - Show the route on a map with visual indicators for stop points (e.g., red dots) where the member stopped for over 10 minutes.
+
+ 4. User Interface Requirements
+
+4.1 Attendance Screen
+- Layout List view of members.
+- Icons
+  - Location Icon: Triggers navigation to Location Detail Screen.
+  - Route Icon: Triggers navigation to Route Detail Screen.
+
+ 4.2 Location Detail Screen
+- Map Area**: Shows the current location of the member.
+- Timeline Section**: Displays locations visited in a list format.
+- Date Filter**: Dropdown or date picker to filter the timeline for specific dates.
+
+ 4.3 Route Detail Screen
+- Route Information**:
+  - Text fields for Start Location, Stop Location, Total Distance, and Total Duration.
+- Map Area**: Displays the route line with stop indicators.
+
+ 5. Non-Functional Requirements
+
+ 5.1 Usability
+- The app should be easy to navigate with clearly labeled icons and buttons.
+
+ 5.2 Performance
+- The app should load screens within 2 seconds on average hardware.
+
+ 5.3 Compatibility
+- The app should be compatible with Android and iOS devices.
+
+ 6. Assumptions and Dependencies
+- Assumes the app will be extended with a backend and map API for a fully functional version.
+- Assumes Flutter will support all necessary UI components.
+
+ 7. Appendix
+
+- Technologies**: Flutter, Google Maps API (future integration)
+- Frameworks and Libraries**: Flutter Material Design
